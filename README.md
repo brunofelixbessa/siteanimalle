@@ -8,7 +8,7 @@ O controle de tarefas será no Github
 
 ## Icones
 
-:pachage: nova funcionalidade
+:package: nova funcionalidade
 :up: atualização
-:beatle: correção de bug
+:beetle: correção de bug
 :checkered_flag: release
