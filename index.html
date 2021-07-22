@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="index.css">
+    <title>Animalle Dignosticos</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Animalle Dignosticos</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+    <!-- CSS custon  -->
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
@@ -26,38 +31,194 @@
             <div class="line" id="line3"></div>
         </div>
 
-        <div class="sidebar">
+        <nav class="superior">
+            <a class="logo" href="#"><img src="imagens/LogoInteiro.png" alt="Logo"></a>
+            <ul class="menu-sup">
+                <li class="menu-item"><a href="#" class="menu-link">Exames Oferecidos</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Convenios</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Seja um parceiro</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Quem somos</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">FaleConosco</a></li>
+            </ul>
+            <div class="social-media-sup">
+                <a class="icon-social" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="icon-social" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="icon-social" href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </nav>
+
+        <aside class="sidebar">
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Exames</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Social</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Colaborador</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Serviços</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Quem somos</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Seja um parceiro</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">FaleConosco</a></li>
                 </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a class="icon-social" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="icon-social" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="icon-social" href="#"><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
+        </aside>
 
-        <header>
+        <a href="#top" class="glyphicon glyphicon-chevron-up"></a>
+
+        <header class="fotos-lista">
             <div class="img-wrapper">
                 <img src="imagens/bg1.jpg" alt="">
-                <div class="banner">
-                    <h1>Animalle Titulo</h1>
-                    <p>Texto menor para apresnetação</p>
+                <div class="banner banner-1">
+                    <h1>1 Excelência no diagnóstico</h1>
+                    <p>Qualidade e cuidados com quem você mais ama.</p>
+                    <button class="button-r">Saiba mais</button>
+                </div>
+            </div>
+            <div class="img-wrapper">
+                <img src="imagens/bg2.jpg" alt="">
+                <div class="banner banner-2">
+                    <h1>2 Excelência no diagnóstico</h1>
+                    <p>Qualidade e cuidados com quem você mais ama.</p>
+                    <button class="button-r">Saiba mais</button>
+                </div>
+            </div>
+            <div class="img-wrapper">
+                <img src="imagens/bg3.jpg" alt="">
+                <div class="banner banner-3">
+                    <h1>3 Excelência no diagnóstico</h1>
+                    <p>Qualidade e cuidados com quem você mais ama.</p>
                     <button class="button-r">Saiba mais</button>
                 </div>
             </div>
         </header>
 
+        <section class="feed-instagram">
+            <div id="instafeed-container">
+
+            </div>
+        </section>
+
+        <section class="sessao-servisos-exames">
+            <div class="sessao-header">
+                <h1>Exames Oferecidos</h1>
+            </div>
+
+            <div class="exames">
+                <div class="card">
+                    <div class="card-img-wraper">
+                        <img src="imagens/exame1.png" alt="Exames">
+                    </div>
+                    <div class="card-info">
+                        <h2>Hmatologia</h2>
+                        <h3>CARACTERÍSTICAS</h3>
+                        <p>Analisador hematológico veterinário modelo Cell Dyn 3700 marca Abbott, capaz de realizar 29
+                            parâmetros em 45 segundos
+                            com contagem de reticulócitos automatizada (padronização)</p>
+                        <button class="button-r">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wraper">
+                        <img src="imagens/exame2.png" alt="Exames">
+                    </div>
+                    <div class="card-info">
+                        <h2>Hmatologia</h2>
+                        <h3>CARACTERÍSTICAS</h3>
+                        <p>Analisador hematológico veterinário modelo Cell Dyn 3700 marca Abbott, capaz de realizar 29
+                            parâmetros em 45
+                            segundos
+                            com contagem de reticulócitos automatizada (padronização)</p>
+                        <button class="button-r">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wraper">
+                        <img src="imagens/exame3.png" alt="Exames">
+                    </div>
+                    <div class="card-info">
+                        <h2>Hmatologia</h2>
+                        <h3>CARACTERÍSTICAS</h3>
+                        <p>Analisador hematológico veterinário modelo Cell Dyn 3700 marca Abbott, capaz de realizar 29
+                            parâmetros em 45
+                            segundos
+                            com contagem de reticulócitos automatizada (padronização)</p>
+                        <button class="button-r">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wraper">
+                        <img src="imagens/exame4.png" alt="Exames">
+                    </div>
+                    <div class="card-info">
+                        <h2>Hmatologia</h2>
+                        <h3>CARACTERÍSTICAS</h3>
+                        <p>Analisador hematológico veterinário modelo Cell Dyn 3700 marca Abbott, capaz de realizar 29
+                            parâmetros em 45
+                            segundos
+                            com contagem de reticulócitos automatizada (padronização)</p>
+                        <button class="button-r">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="quem-somos">
+
+        </section>
+        <section class="seja-parceiro">
+
+        </section>
+        <section class="Fale-conosco">
+
+        </section>
+
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <!-- Para o carrossel de fotos -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $('.fotos-lista').slick({
+            autoplay: true,
+            arrows: false,
+            autoplaySpeed: 5000,
+            slidesToShow: 1,
+            infinite: true,
+        });
+    </script>
+
+    <!-- cookies -->
+    <div class="box-cookies hide">
+        <p class="msg-cookies">Queremos aprimorar sua experiência e cuidar sempre da saúde dos seus Pets. Portanto,
+            utilizamos cookies e protegemos seus dados de
+            acordo com a LGPD (13.709/2018).</p>
+        <button class="btn-cookies">CONTINUAR</button>
+        <a href="#" target="_blank">Conheça nossa Política de Privacidade</a>
     </div>
 
 </body>
 
+<!-- Java scipt de acoes do site -->
 <script src="index.js"></script>
+
+<!-- Para feed do instagram tem que ser sempre depois do index.js -->
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        target: "instafeed-container",
+        resolution: 'low_resolution',
+        accessToken: 'IGQVJWVDIzeFY3dGpkTE5fUGdtcHVHX3dSV3dfS1Nha3o0bmZAaR0tDb3N1UFpfdzRRX3JLSTZAveWJoY3dNdHU4S3dGdWEtYkhEZAmF0N0FudXdaLXF4SkJXY0NmT1h6NlRrRUhOSV9qdXBfd3BZAOFc0bQZDZD'
+    });
+    userFeed.run();
+</script>
 
 </html>
