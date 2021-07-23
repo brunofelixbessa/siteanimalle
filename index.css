@@ -24,6 +24,7 @@
 html {
     /* a cada 1rem vai ser 10px */
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -273,7 +274,7 @@ header{
 }
 
 
-.button-r {
+.btn {
     font-family: var(--font-primaria);
     color: #ffffff;
     background-color: var(--verde);
@@ -286,11 +287,13 @@ header{
     animation: moveBanner 1s;
     box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
 }
-.button-r:hover {
+.btn:hover {
     opacity: 0.9;
 }
-.feed-instagram{
-   background-color: var(--cinza1);
+.sessao-feed-instagram {
+    width: 100%;
+    background-color: var(--cinza1);
+    margin-bottom: 1rem;
 }
 #instafeed-container {
     display: flex;
@@ -300,8 +303,8 @@ header{
     flex-wrap: wrap;
 }
 #instafeed-container a {
-    width: 33rem;
-    height: 33rem;
+    width: 30rem;
+    height: 30rem;
     position: relative;
 }
 #instafeed-container a img{
@@ -320,14 +323,22 @@ header{
 }
 
 .sessao-servisos-exames{
-
+   width: 100%;
+   height: 100vh;
+   background-color: #4FBA6E;
 }
 .sessao-header{
-
+    width: 100%;
+    padding: 2rem 0rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sessao-header h1 {
   font-family: var(--font-primaria);
-   font-size: 5rem;
+  font-size: 5rem;
+  color: var(--roxa);
+  border-bottom: .6rem solid var(--roxa);
 }
 
 .exames{
@@ -419,7 +430,6 @@ a[href="#top"]:hover {
 .box-cookies.hide {
     display: none !important;
 }
-
 .box-cookies {
     position: fixed;
     background: rgba(0, 0, 0, .9);
@@ -430,11 +440,9 @@ a[href="#top"]:hover {
     align-items: center;
     justify-content: space-between;
 }
-
 .box-cookies a{
     margin-left: 10px;
 }
-
 .box-cookies .msg-cookies,
 .box-cookies .btn-cookies {
     text-align: center;
@@ -442,13 +450,142 @@ a[href="#top"]:hover {
     color: #fff;
     font-size: 18px;
 }
-
 .box-cookies .btn-cookies {
     background: var(--roxa);
     cursor: pointer;
     align-self: normal;
     border: 0;
 }
+
+.essao-servisos-exames{
+     width: 100%;
+     height: 100vh;
+}
+
+.sessao-contato{
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--cinza2); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sessao-contato h1{
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--roxa);  
+    font-weight: 400;
+}
+.contato-wrapper{
+    width: 60%;
+    display: flex;
+    box-shadow: 1rem 3rem 5rem rgba(22,22,22, .5);
+}
+.contato-e{
+    width: 30%;
+    background-color: var(--verde);
+    /* background: 
+         linear-gradient(rgba(15, 15, 15, 0.6), rgba(25, 25, 25, 0.9)),
+         url("/imagens/bgContato.JPG"); */
+    background-size: cover;
+    height: 50rem;
+}
+.contato-d{
+    color: var(--roxa);
+    width: 70%;
+    padding: 4rem;
+    background-color: var(--lilas);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-group {
+    position: relative;
+}
+.input-group textarea{
+    padding-top: 1.5rem;
+    height: 15rem;
+    max-width: 35rem;
+    max-height: 15rem;
+    min-height: 10rem;
+    min-width: 15rem;
+}
+.input-group input {
+    padding-top: 1rem;
+}
+.field{
+    color: var(--cinza2);
+    background: transparent;
+    border: 0;
+    width: 35rem;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--roxa);
+    outline: none;
+    height: 6rem;
+}
+.field-label{
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    transition: all .3s;
+}
+.field:focus ~ label {
+    top:0;
+    font-size: 1.5rem;
+}
+.field:focus {
+     border-bottom: 2px solid var(--roxa);
+}
+
+.sessao-parceiro{
+    width: 100%;
+    height: 100vh;
+}
+.parceiros{
+    width: 100%;
+    padding: 4rem;
+    text-align: center;
+}
+
+.sessao-quemsomos{
+     width: 100%;
+     height: 100vh;
+     background-color: var(--roxa);
+     color: var(--lilas);
+     padding: 10rem;
+     text-align: justify;
+}
+
+.sessao-quemsomos h1 {
+     color: var(--lilas);
+}
+
+.footer-content{
+    background-color:var(--cinza2);
+    width: 100%;
+    height: 10vh;
+    color: var(--branco);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-content a {
+    color: var(--branco);
+}
+
+.social-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-list i {
+    color: var(--branco);
+}
+
 
 
 

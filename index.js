@@ -33,12 +33,12 @@ $(document).ready(function () {
         }
     });
 
-    $('a[href="#top"]').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
+    // $('a[href="#top"]').click(function () {
+    //     $('html, body').animate({
+    //         scrollTop: 0
+    //     }, 800);
+    //     return false;
+    // });
 });
 
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
             debug: !1,
             error: null,
             filter: null,
-            limit: 6,
+            limit: 4,
             mock: !1,
             render: null,
             sort: null,
