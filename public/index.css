@@ -383,19 +383,19 @@ header{
 .card{
     width: 30rem;
     height: 35rem;
-    background-color: var(--lilas);
+    background-color: var(--roxa);
      border-radius: 5px;
      position: relative;
       box-shadow: 0.4rem 0.2rem 0.5rem rgba(0, 0, 0, .4);
 }
 
 .card:hover .card-info{
-     opacity: 1;
-     visibility: visible;
+     /* opacity: 1;
+     visibility: visible; */
 }
 
 .card:hover .card-img-wraper img {
-    opacity: .5;
+    /* opacity: .5; */
 }
 
 .card-img-wraper {
@@ -412,11 +412,11 @@ header{
 }
 .card-info{
     position: absolute;
-    bottom: 0;
+    top: 4rem;
     padding: 2rem;  
-    opacity: 0;
+    /* opacity: 0;
     visibility: hidden;
-    transition: opacity .3s;
+    transition: opacity .3s; */
 }
 
 .card-info h2 {
@@ -427,7 +427,7 @@ header{
 }
 .card-info h3{ 
     font-size: 2rem;
-    color: var(--roxa);
+    color: var(--lilas);
      text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
 }
 .card-info p {

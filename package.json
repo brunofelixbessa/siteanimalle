@@ -1,0 +1,29 @@
+{
+  "name": "siteanimalle",
+  "version": "1.0.0",
+  "description": "Site da Animalle",
+  "main": "index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
+    "dotenv-safe": "^8.2.0",
+    "nodemailer": "^6.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunofelixbessa/siteanimalle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunofelixbessa/siteanimalle/issues"
+  },
+  "homepage": "https://github.com/brunofelixbessa/siteanimalle#readme"
+}

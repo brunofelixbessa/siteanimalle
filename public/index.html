@@ -12,6 +12,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Servisos do firebase que vou usar -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
@@ -109,7 +114,7 @@
             <div class="exames">
                 <div class="card">
                     <div class="card-img-wraper">
-                        <img src="imagens/exame1.png" alt="Exames">
+                        <!-- <img src="imagens/exame1.png" alt="Exames"> -->
                     </div>
                     <div class="card-info">
                         <h2>Análises Clínicas</h2>
@@ -117,30 +122,30 @@
                         <p>Hematologia, Bioquímica, Hormonais, Hemostasia, Urinálise, Parasitologia, Imunologia,
                             Citologia, Microbiologia, Biologia
                             Molecular</p>
-                        <button class="btn">Saiba Mais</button>
+                        <!-- <button class="btn">Saiba Mais</button> -->
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-wraper">
-                        <img src="imagens/exame2.png" alt="Exames">
+                        <!-- <img src="imagens/exame2.png" alt="Exames"> -->
                     </div>
                     <div class="card-info">
                         <h2>Sem titulo</h2>
                         <h3>CARACTERÍSTICAS</h3>
                         <p>Ultrassomografia e Radiografia</p>
-                        <button class="btn">Saiba Mais</button>
+                        <!-- <button class="btn">Saiba Mais</button> -->
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-wraper">
-                        <img src="imagens/exame3.png" alt="Exames">
+                        <!-- <img src="imagens/exame3.png" alt="Exames"> -->
                     </div>
                     <div class="card-info">
                         <h2>Especialidades</h2>
                         <h3>CARACTERÍSTICAS</h3>
                         <p>Cardio: Ecocardiograma e Eletrocardiograma
                             Gastro: Endoscopia</p>
-                        <button class="btn">Saiba Mais</button>
+                        <!-- <button class="btn">Saiba Mais</button> -->
                     </div>
                 </div>
                 <!-- <div class="card">
@@ -169,17 +174,18 @@
 
         <section class="sessao-parceiro" id="parceiro">
             <div class="sessao-header">
-                <h1>Querido veterinário</h1>
+                <h1>VETERINÁRIOS</h1>
             </div>
             <div class="parceiros">
+                <h1>Querido veterinário,</h1>
                 <h1>Seja um parceiro do Animalle Diagnósticos e tenha acesso aos seguintes benefícios:</h1>
                 <br />
                 <h3>
-                    <p>• serviço de retirada de amostras sem custo adicional de segunda a sábado;</p>
-                    <p>• desconto sobre o valor dos exames laboratoriais coletados na própria clínica;</p>
-                    <p>• kit com material para acondicionamento de amostras;</p>
+                    <p>• Serviço de retirada de amostras sem custo adicional de segunda a sábado;</p>
+                    <p>• Desconto sobre o valor dos exames laboratoriais coletados na própria clínica;</p>
+                    <p>• Kit com material para acondicionamento de amostras;</p>
                     <p>• SAC Vet: contato direto com equipe de profissionais altamente capacitados para esclarecer
-                        dúvidas e indicar procedimentos.</p>
+                        dúvidas e indicar procedimentos;</p>
                     <p>• Club Animalle com eventos e treinamentos exclusivos.</p>
 
                 </h3>
@@ -201,9 +207,8 @@
                         tutores e
                         veterinários parceiros.
                         Porque quando o assunto é a saúde dos nossos animais, é só amor e cuidado extremos.
-                        Num espaço único e exclusivo a Animalle Diagnósticos chega numa localiação privilegiada e de
-                        fácil
-                        acesso no Tatuape,
+                        Num espaço único e exclusivo a Animalle Diagnósticos chega numa localização privilegiada e de
+                        fácil acesso no Tatuapé,
                         com espaço amplo e moderno para uma experiência excelente para os animais e seus tutores.</p>
                     <br />
                     <h3>
@@ -224,18 +229,22 @@
                 <div class="contato-e"></div>
                 <div class="contato-d">
                     <h1>Fale conosco</h1>
-                    <form action="" method="POST">
+                    <form class="contato-form">
                         <div class="input-group">
-                            <input type="text" class="field" id=nome name="nome">
-                            <label class="field-label" for="nome">Nome</label>
+                            <input required type="text" class="field" id="name">
+                            <label class="field-label" for="nome">* Nome</label>
                         </div>
                         <div class="input-group">
-                            <input type="email" class="field" id="email" name="email">
-                            <label class="field-label" for="email">Email</label>
+                            <input required type="email" class="field" id="email">
+                            <label class="field-label" for="email">* Email</label>
                         </div>
                         <div class="input-group">
-                            <textarea type="text" class="field" id="mensagem" name="mensagem"></textarea>
-                            <label class="field-label" for="mensagem">Mensagem</label>
+                            <input required type="text" class="field" id="subject">
+                            <label class="field-label" for="subject">* Assunto</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea required type="text" class="field" id="message"></textarea>
+                            <label class="field-label" for="message">* Mensagem</label>
                         </div>
                         <button class="btn" type="submit">ENVIAR</button>
                     </form>
@@ -255,7 +264,24 @@
             </div>
         </footer>
 
+        <!-- cookies -->
+        <div class="box-cookies hide">
+            <p class="msg-cookies">Queremos aprimorar sua experiência e cuidar sempre da saúde dos seus Pets. Portanto,
+                utilizamos cookies e protegemos seus dados de
+                acordo com a LGPD (13.709/2018).</p>
+            <button class="btn-cookies">CONTINUAR</button>
+            <a href="#" target="_blank">Conheça nossa Política de Privacidade</a>
+        </div>
+
     </div>
+
+    <!-- Isicalizador do Firebase e metodos realcionados ao mesmo  -->
+    <!-- <script defer src="./firebase.js"></script> -->
+
+    <!-- Script proprio com incializador do Firebase  -->
+    <!-- <script defer src="./index.js"></script> -->
+    <!-- Java script de acoes do site -->
+    <script defer src="index.js"></script>
 
     <!-- Para o carrossel de fotos -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -272,29 +298,18 @@
         });
     </script>
 
-    <!-- cookies -->
-    <div class="box-cookies hide">
-        <p class="msg-cookies">Queremos aprimorar sua experiência e cuidar sempre da saúde dos seus Pets. Portanto,
-            utilizamos cookies e protegemos seus dados de
-            acordo com a LGPD (13.709/2018).</p>
-        <button class="btn-cookies">CONTINUAR</button>
-        <a href="#" target="_blank">Conheça nossa Política de Privacidade</a>
-    </div>
+    <!-- Para feed do instagram tem que ser sempre depois do index.js -->
+    <!-- <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            target: "instafeed-container",
+            resolution: 'low_resolution',
+            accessToken: 'IGQVJWVDIzeFY3dGpkTE5fUGdtcHVHX3dSV3dfS1Nha3o0bmZAaR0tDb3N1UFpfdzRRX3JLSTZAveWJoY3dNdHU4S3dGdWEtYkhEZAmF0N0FudXdaLXF4SkJXY0NmT1h6NlRrRUhOSV9qdXBfd3BZAOFc0bQZDZD'
+        });
+        userFeed.run();
+    </script> -->
+
 
 </body>
-
-<!-- Java scipt de acoes do site -->
-<script src="index.js"></script>
-
-<!-- Para feed do instagram tem que ser sempre depois do index.js -->
-<script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        target: "instafeed-container",
-        resolution: 'low_resolution',
-        accessToken: 'IGQVJWVDIzeFY3dGpkTE5fUGdtcHVHX3dSV3dfS1Nha3o0bmZAaR0tDb3N1UFpfdzRRX3JLSTZAveWJoY3dNdHU4S3dGdWEtYkhEZAmF0N0FudXdaLXF4SkJXY0NmT1h6NlRrRUhOSV9qdXBfd3BZAOFc0bQZDZD'
-    });
-    userFeed.run();
-</script>
 
 </html>

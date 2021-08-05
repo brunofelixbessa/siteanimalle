@@ -1,6 +1,115 @@
+//############ Metodos Firebase #################
+//Pega metodos do Firebase
+var firebaseConfig = {
+    apiKey: "AIzaSyC1qSGpeYOMjLSMsfWp0Trh8ZWT7v6jXvk",
+    authDomain: "animale-site.firebaseapp.com",
+    databaseURL: "https://animale-site-default-rtdb.firebaseio.com",
+    projectId: "animale-site",
+    storageBucket: "animale-site.appspot.com",
+    messagingSenderId: "705477879045",
+    appId: "1:705477879045:web:bd382a7d3e29b0828f836c",
+    measurementId: "G-5WE8M8XWKH"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//Abre conexao com firebase Database
+var database = firebase.database();
+
+//Salva na coleção do Database
+function firebasePush(lead) {
+
+    // database = firebase.database().ref('EmailLeads').push().set({
+    //     lead
+    // });
+
+    // [START rtdb_write_new_user_completion]
+    firebase.database().ref('EmailLeads').push().set({
+        name: lead.name,
+        email: lead.email,
+        assunto: lead.subject,
+        mensagem: lead.message
+    }, (error) => {
+        if (error) {
+            // The write failed...
+            alert('Erro no envio motivo desconhecido.');
+        } else {
+            // Data saved successfully!
+            alert('Email enviado com sucesso.');
+        }
+    });
+    // [END rtdb_write_new_user_completion]
+
+}
+//############ FIM Metodos Firebase #################
+
+//Envio de emails
+var nodemailer = require('nodemailer');
+
+function enviaEmail(formData) {
+
+    const emailGmail = 'administracao@animallediagnosticos.com.br';
+    const senha = 'axxmkqkvthquxenp';
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: emailGmail,
+            pass: senha
+        }
+    });
+
+    const mailoptions = {
+        from: emailGmail,
+        to: emailGmail,
+        subject: `Enviado pelo site: Assunto: ${formData.subject}`,
+        html: `<p>Nome: ${formData.name} '</p><p>Email:' ${formData.email} '</p><p>Mensagem:' ${formData.message}</p>`,
+        text: `Nome: ${formData.name} '<br />Email:' ${formData.email} '<br />Mensagem:' ${formData.message}`
+    }
+
+    transporter.sendMail(mailoptions, (error, data) => {
+        if (error) {
+            console.log(error);
+            res.send('error');
+        } else {
+            console.log('Email enviado:' + data.response);
+            res.send('success');
+        }
+    });
+}
+
+//Formulario fale conosco
+const formulario = document.querySelector(".contato-form");
+
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let subject = document.getElementById('subject');
+let message = document.getElementById('message');
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let formData = {
+        name: name.value,
+        email: email.value,
+        subject: subject.value,
+        message: message.value
+    }
+
+    firebasePush(formData);
+    //enviaEmail(formData);
+
+    // name.value = '';
+    // email.value = '';
+    // subject.value = '';
+    // message.value = '';
+
+});
+
+
 // Menu Hamburguer Lateral
 var hamburguer = document.querySelector(".hamburguer");
-
 hamburguer.addEventListener("click", () => {
     document.querySelector(".container").classList.toggle("show-menu");
 });
@@ -40,7 +149,6 @@ $(document).ready(function () {
     //     return false;
     // });
 });
-
 
 // Feed do instagram
 ! function (e, t) {
