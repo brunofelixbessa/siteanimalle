@@ -523,7 +523,7 @@ a[href="#top"]:hover {
          linear-gradient(rgba(15, 15, 15, 0.6), rgba(25, 25, 25, 0.9)),
          url("/imagens/bgContato.JPG"); */
     background-size: cover;
-    height: 50rem;
+    /* height: 50rem; */
 }
 .contato-d{
     color: var(--roxa);

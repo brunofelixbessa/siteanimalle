@@ -5,8 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@sendgrid/mail": "^7.4.5",
-    "dotenv-safe": "^8.2.0",
-    "nodemailer": "^6.6.3"
+    "dotenv-safe": "^8.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

@@ -44,40 +44,24 @@ function firebasePush(lead) {
 }
 //############ FIM Metodos Firebase #################
 
-//Envio de emails
-var nodemailer = require('nodemailer');
+//############ Envio de emails SMTPjs.com ############
+function enviarEmail(emailData) {
 
-function enviaEmail(formData) {
+    const user = 'administracao@animallediagnosticos.com.br';
 
-    const emailGmail = 'administracao@animallediagnosticos.com.br';
-    const senha = 'axxmkqkvthquxenp';
+    Email.send({
+        SecureToken: "dd42be20-ae8f-412b-be5f-e85ac199a375",
+        To: user,
+        From: user,
+        Subject: "Enviado pelo site",
+        Body: `<p>Nome: ${emailData.name} </p><p>Assunto: ${emailData.subject} </p><p>Mensagem: ${emailData.mensagem}`,
+    }).then(
+        message => alert("Email enviado com sucesso.")
+    );
 
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: emailGmail,
-            pass: senha
-        }
-    });
-
-    const mailoptions = {
-        from: emailGmail,
-        to: emailGmail,
-        subject: `Enviado pelo site: Assunto: ${formData.subject}`,
-        html: `<p>Nome: ${formData.name} '</p><p>Email:' ${formData.email} '</p><p>Mensagem:' ${formData.message}</p>`,
-        text: `Nome: ${formData.name} '<br />Email:' ${formData.email} '<br />Mensagem:' ${formData.message}`
-    }
-
-    transporter.sendMail(mailoptions, (error, data) => {
-        if (error) {
-            console.log(error);
-            res.send('error');
-        } else {
-            console.log('Email enviado:' + data.response);
-            res.send('success');
-        }
-    });
 }
+
+//############ FIM Envio de emails SMTPjs.com ############
 
 //Formulario fale conosco
 const formulario = document.querySelector(".contato-form");
@@ -97,13 +81,13 @@ formulario.addEventListener('submit', (e) => {
         message: message.value
     }
 
+    enviarEmail(formData);
     firebasePush(formData);
-    //enviaEmail(formData);
 
-    // name.value = '';
-    // email.value = '';
-    // subject.value = '';
-    // message.value = '';
+    name.value = '';
+    email.value = '';
+    subject.value = '';
+    message.value = '';
 
 });
 
