@@ -72,9 +72,10 @@
                 </ul>
             </nav>
             <div class="social-media">
-                <a class="icon-social" href="#"><i class="fab fa-facebook"></i></a>
-                <a class="icon-social" href="#"><i class="fab fa-instagram"></i></a>
-                <a class="icon-social" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="icon-social" target="_blank" href="https://api.whatsapp.com/send?phone=551122251917"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a class="icon-social" href="https://www.instagram.com/animallediagnosticos"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </aside>
 
@@ -234,19 +235,19 @@
                     <h1>Fale conosco</h1>
                     <form class="contato-form">
                         <div class="input-group">
-                            <input required type="text" class="field" id="name">
-                            <label class="field-label" for="nome">* Nome</label>
+                            <input required type="text" id="name" autocomplete="off">
+                            <label for="nome">* Nome</label>
                         </div>
                         <div class="input-group">
-                            <input required type="email" class="field" id="email">
+                            <input required type="email" id="email" autocomplete="off">
                             <label class="field-label" for="email">* Email</label>
                         </div>
                         <div class="input-group">
-                            <input required type="text" class="field" id="subject">
+                            <input required type="text" id="subject" autocomplete="off">
                             <label class="field-label" for="subject">* Assunto</label>
                         </div>
                         <div class="input-group">
-                            <textarea required type="text" class="field" id="message"></textarea>
+                            <textarea required type="text" id="message" autocomplete="off"></textarea>
                             <label class="field-label" for="message">* Mensagem</label>
                         </div>
                         <button class="btn" style="width: 100%;" type="submit">ENVIAR</button>
@@ -260,9 +261,10 @@
                 <p>Copyright &copy; 2021, <a href="https://www.linkedin.com/in/bruno-felix-a7755120/">Futura
                         Tecnologia</a></p>
                 <div class="social-list">
-                    <a class="icon-social" href="#"><i class="fab fa-facebook"></i></a>
-                    <a class="icon-social" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="icon-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="icon-social" target="_blank" href="https://api.whatsapp.com/send?phone=551122251917"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a class="icon-social" href="https://www.instagram.com/animallediagnosticos"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </footer>
@@ -302,7 +304,7 @@
     </script>
 
     <!-- Para feed do instagram tem que ser sempre depois do index.js -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         var userFeed = new Instafeed({
             get: 'user',
             target: "instafeed-container",
@@ -310,7 +312,7 @@
             accessToken: 'IGQVJWVDIzeFY3dGpkTE5fUGdtcHVHX3dSV3dfS1Nha3o0bmZAaR0tDb3N1UFpfdzRRX3JLSTZAveWJoY3dNdHU4S3dGdWEtYkhEZAmF0N0FudXdaLXF4SkJXY0NmT1h6NlRrRUhOSV9qdXBfd3BZAOFc0bQZDZD'
         });
         userFeed.run();
-    </script> -->
+    </script>
 
 
 </body>

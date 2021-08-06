@@ -91,6 +91,21 @@ formulario.addEventListener('submit', (e) => {
 
 });
 
+//Adiciona e remove classe dos inputs no load da pagina em caso de foco
+$(document).ready(function () {
+    $('input').blur(function () {
+        if ($(this).val())
+            $(this).addClass('used');
+        else
+            $(this).removeClass('used');
+    });
+    $('textarea').blur(function () {
+        if ($(this).val())
+            $(this).addClass('used');
+        else
+            $(this).removeClass('used');
+    });
+});
 
 // Menu Hamburguer Lateral
 var hamburguer = document.querySelector(".hamburguer");

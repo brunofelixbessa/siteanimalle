@@ -40,6 +40,19 @@ html {
     color: var(--cinza2);
 }
 
+/* Remove o backgound color do outocomplete do chorme */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
 .fundo-roxa{
     background-color: var(--roxa);
 }
@@ -53,7 +66,7 @@ html {
 .hamburguer{
     width: 3rem;
     height: 3rem;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     right: 3rem;
     top: 3rem;
@@ -61,15 +74,6 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .hamburguer{
-        display: flex;
-    }
-    .superior {
-        display: none !important;
-    }
 }
 
 .line{
@@ -143,15 +147,17 @@ html {
 }
 
 .sidebar{
-    width: 30rem;
+    width: 25rem;
     height: 100vh;
     background-color: #fff;
     position: fixed;
-    right: -30rem;
+    right: -40rem;
     top: 0;
     z-index: 998;
     transition: all 1s;
 }
+
+
 .show-menu .sidebar {
    right: 0;
 }
@@ -170,14 +176,16 @@ html {
     position: absolute;
     top: 40%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
 }
 .menu-item{
      text-align: center;
      margin-bottom: 1rem;
 }
+
 .menu-link{
-    font-size: 3rem;
+    font-size: 2.5rem;
     /* color: var(--verde);
     transition: color 1s; */
 }
@@ -264,17 +272,20 @@ header{
     top: 30%;
     width: 50rem;
 }
-.banner-1 { 
-    left: 12%;
+.banner-1 {
+    left: 12.5%;
 }
+
 .banner-2 {
-    left: 23%;
+    left: 23.5%;
 }
+
 .banner-3 {
-    left: 34.1%;
+    left: 34.6%;
 }
+
 .banner-4 {
-    left: 45.3%;
+    left: 45.7%;
 }
 
 .banner h1{
@@ -378,6 +389,8 @@ header{
 .exames{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .card{
@@ -387,6 +400,7 @@ header{
      border-radius: 5px;
      position: relative;
       box-shadow: 0.4rem 0.2rem 0.5rem rgba(0, 0, 0, .4);
+      margin-bottom: 10px;
 }
 
 .card:hover .card-info{
@@ -440,7 +454,7 @@ header{
 a[href="#top"] {
     background-color: rgba(0, 0, 0, 0.24);
     position: fixed;
-    top: 92%;
+    bottom: 5rem;
     right: 10px;
     width: 44px;
     height: 44px;
@@ -536,43 +550,60 @@ a[href="#top"]:hover {
 }
 .input-group {
     position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
 }
-.input-group textarea{
-    padding-top: 1.5rem;
+.input-group label{
+    color: var(--roxa);
+    font-size: 2rem;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top:1.8rem;
+    transition: 0.2s ease all;
+}
+
+.input-group input{
+    height: 6rem;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.input-group textarea {
     height: 15rem;
-    max-width: 35rem;
+    width: 100%;
+    padding: 2rem 0rem 1rem 0rem;
+    max-width: 100%;
     max-height: 15rem;
     min-height: 10rem;
     min-width: 15rem;
 }
+
+.input-group textarea,
 .input-group input {
-    padding-top: 1rem;
+     color: var(--cinza2);
+     font-size: 2.2rem;
+     
+     display: block;
+     outline: none;
+     border: none;  
+     background: transparent;
+     border-bottom: 1px solid var(--roxa);
 }
-.field{
-    color: var(--cinza2);
-    background: transparent;
-    border: 0;
-    width: 35rem;
-    font-size: 2rem;
-    border-bottom: 1px solid var(--roxa);
-    outline: none;
-    height: 6rem;
+.input-group textarea:focus,
+.input-group input:focus{
+    border-bottom: 2px solid var(--roxa);
 }
-.field-label{
-    position: absolute;
-    left: 0;
-    top: 3rem;
-    font-size: 2rem;
-    font-weight: 400;
-    transition: all .3s;
+
+.input-group textarea:focus ~ label,
+.input-group textarea.used ~ label,
+.input-group input:focus ~ label,
+.input-group input.used ~ label {
+     top:-.6rem;
+     /* color: var(--roxa); */
+     font-size: 1.7rem;
+     font-weight: 600;
 }
-.field:focus ~ label {
-    top:0;
-    font-size: 1.5rem;
-}
-.field:focus {
-     border-bottom: 2px solid var(--roxa);
-}
+
 
 .sessao-parceiro{
     width: 100%;
@@ -588,11 +619,12 @@ a[href="#top"]:hover {
      width: 100%;
      height: 100vh;
      background-color: var(--roxa);
-     color: var(--lilas);
+     color: var(--lilas);   
+}
+.quemsomos{
      padding: 5rem 10rem;
      text-align: justify;
 }
-
 .sessao-quemsomos h1 {
      color: var(--lilas);
 }
@@ -620,6 +652,94 @@ a[href="#top"]:hover {
     color: var(--branco);
 }
 
+/* CSS para outros dispositvos */
 
+@media only screen and (max-width: 500px) {
+
+
+    header {
+        height: 24rem ;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 25px;
+    }
+    .slick-prev {
+        left: 1rem !important;
+    }
+
+    .slick-next {
+        right: 2rem !important;
+    }
+
+    .banner  {
+        width: 27rem;
+        top: 45%;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+
+    [class*="sessao-"] {
+       height: auto;
+    }
+
+    .sessao-header h1 {
+        font-size: 3rem;
+    }
+
+    .card-info p {
+        font-size: 2rem;
+    }
+
+    .parceiros {
+        padding: 2rem ;
+        text-align: left;
+    }
+
+    .parceiros p{
+        margin-bottom: 2rem;
+    }
+    .quemsomos {
+        padding: 2rem;
+    }
+    .quemsomos p {
+        margin-bottom: 2rem;
+    }
+
+    .contato-wrapper {
+        width: 100%;
+    }
+    .contato-e {
+        width: 2%;
+    }
+    .contato-d {
+        width: 98%;
+        padding: 1rem;
+    }
+
+    .contato-d form{
+        width: 100%;
+    }
+    .input-group input{
+        width: 100%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .hamburguer {
+        display: flex;
+        /* right: 15px; */
+    }
+
+    .superior {
+        display: none !important;
+    }
+}
 
 
