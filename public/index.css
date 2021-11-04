@@ -185,7 +185,14 @@ input:-webkit-autofill:active {
     background-color: #2CB241;
     box-shadow: .1px .1px 3px #494949;
     padding: 5px 10px;
-     font-size: 2rem;
+    font-size: 2rem;
+    transition: color 1s;
+    display: block;
+    text-align: center;
+}
+
+.whatsapp-f-largo:hover {
+    opacity: 0.9;
 }
 
 .whatsapp-f-largo i {
