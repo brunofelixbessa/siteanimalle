@@ -31,6 +31,19 @@ body {
     font-size: 1.6rem;
 }
 
+h1{
+   font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1rem;
+}
+
 body,
 html {
     font-family: var(--font-primaria);
@@ -86,7 +99,7 @@ input:-webkit-autofill:active {
 
 .superior{
     width: 100%;
-    height: 6rem;
+    height: 12rem;
     display: flex;
     transition: all 1s; 
 }
@@ -117,7 +130,7 @@ input:-webkit-autofill:active {
     transition: background-color 1s;
 }
 .menu-sup a {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--roxa);   
     width: inherit;
     align-self: center;
@@ -127,23 +140,42 @@ input:-webkit-autofill:active {
 }
 
 .social-media-sup{
-     width: 25%;
-    /* position: absolute;
-    bottom: 2rem; */
+    width: 25%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .endereco{
+    font-size: 2rem;
     color: #000;
-    font-size: 1.2rem;
     font-weight: 400;
 }
 .telefone{
-     color: #000;
-   font-size: 1.4rem;
+   font-size: 2rem;
+   color: var(--roxa);   
    font-weight: 400;
+}
+
+.whatsapp-f{
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    z-index: 10;
+}
+
+.whatsapp-f i{
+    color: #fff;
+    font-size: 5.8rem;
+    width: 50px;
+    height: 50px;
+    background-color: #2CB241;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color .5s;
+    text-shadow: 1px 1px 3px #494949;
 }
 
 .sidebar{
@@ -289,7 +321,7 @@ header{
 }
 
 .banner h1{
-    font-size: 4.6rem;   
+    /* font-size: 4.6rem;    */
     line-height: 3.5rem;
     text-shadow: .3rem .4rem 2px rgba(0,0,0,.4) ;
     margin-bottom: 2rem;
@@ -360,17 +392,18 @@ header{
 }
 
 .conhecimentos {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .sessao-servisos-exames{
    width: 100%;
-   height: 100vh;
+   /* height: 100vh; */
    background-color: #4FBA6E;
+   padding-bottom: 5rem;
 }
 .sessao-header{
     width: 100%;
@@ -381,7 +414,7 @@ header{
 }
 .sessao-header h1 {
   font-family: var(--font-primaria);
-  font-size: 5rem;
+  /* font-size: 5rem; */
   color: var(--roxa);
   border-bottom: .6rem solid var(--roxa);
 }
@@ -395,27 +428,18 @@ header{
 
 .card{
     width: 30rem;
-    height: 35rem;
+    height: 30rem;
     background-color: var(--roxa);
      border-radius: 5px;
      position: relative;
       box-shadow: 0.4rem 0.2rem 0.5rem rgba(0, 0, 0, .4);
-      margin-bottom: 10px;
-}
-
-.card:hover .card-info{
-     /* opacity: 1;
-     visibility: visible; */
-}
-
-.card:hover .card-img-wraper img {
-    /* opacity: .5; */
 }
 
 .card-img-wraper {
     width: 100%;
     height: 100%;
 }
+
 .card-img-wraper img {
     object-fit: cover;
     width: 100%;
@@ -424,6 +448,7 @@ header{
     opacity: .9;
      transition: opacity .3s;
 }
+
 .card-info{
     position: absolute;
     top: 4rem;
@@ -434,18 +459,13 @@ header{
 }
 
 .card-info h2 {
-    font-size: 3.5rem;
+    /* font-size: 3rem; */
     font-family: var(--font-primaria);
     color: var(--branco);
     text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
 }
-.card-info h3{ 
-    font-size: 2rem;
-    color: var(--lilas);
-     text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
-}
 .card-info p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 400;
      color: var(--branco);
       text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
@@ -505,15 +525,14 @@ a[href="#top"]:hover {
     border: 0;
 }
 
-.essao-servisos-exames{
+/* .essao-servisos-exames{
      width: 100%;
      height: 100vh;
-}
+} */
 
 .sessao-contato{
     width: 100%;
     height: 100vh;
-    /* background-color: var(--cinza2); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -521,7 +540,7 @@ a[href="#top"]:hover {
 .sessao-contato h1{
     width: 100%;
     text-align: center;
-    font-size: 5rem;
+    /* font-size: 5rem; */
     color: var(--roxa);  
     font-weight: 400;
 }
@@ -607,26 +626,58 @@ a[href="#top"]:hover {
 
 .sessao-parceiro{
     width: 100%;
-    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
 }
-.parceiros{
+
+.box-50 {
+    width: 50%;
+}
+
+.img-wraper img{
+    object-fit: cover;
     width: 100%;
-    padding: 5rem 10rem;
+    height: 100%;
+}
+
+.parceiros-caixa{
+    padding: 5rem 5rem;
     text-align: justify;
+    align-self: center;
+}
+
+
+.parceiros h2{
+    font-weight: bold;
+    color: var(--verde);
+    text-align: left;
+}
+
+.parceiros h3{
+    /* font-size: 3rem; */
 }
 
 .sessao-quemsomos{
-     width: 100%;
-     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
      background-color: var(--roxa);
      color: var(--lilas);   
 }
-.quemsomos{
-     padding: 5rem 10rem;
-     text-align: justify;
+
+.quemsomos-caixa{
+    padding: 5rem 5rem;
+    text-align: justify;
+    align-self: center;
 }
+
 .sessao-quemsomos h1 {
+    /* font-size: 3rem; */
      color: var(--lilas);
+}
+
+.sessao-quemsomos h3 {
+    /* font-size: 3rem; */
 }
 
 .sessao-laudos {
@@ -669,6 +720,10 @@ a[href="#top"]:hover {
     justify-content: space-evenly;
 }
 
+.social-list div{
+    align-self: center;
+}
+
 .social-list i {
     color: var(--branco);
 }
@@ -680,6 +735,10 @@ a[href="#top"]:hover {
 
     header {
         height: 24rem ;
+    }
+
+    .box-50 {
+        width: 100%;
     }
 
     .slick-prev:before,
@@ -700,7 +759,7 @@ a[href="#top"]:hover {
     }
 
     .banner h1 {
-        font-size: 2.2rem;
+        /* font-size: 2.2rem; */
         line-height: 2.5rem;
     }
 
@@ -708,12 +767,20 @@ a[href="#top"]:hover {
        height: auto;
     }
 
-    .sessao-header h1 {
-        font-size: 3rem;
+    .footer-content {
+        flex-wrap: wrap;
     }
 
     .card-info p {
         font-size: 2rem;
+    }
+
+    .sessao-parceiro {
+        flex-direction: column-reverse;
+    }
+
+    .parceiros-caixa{
+        padding: 1rem ;
     }
 
     .parceiros {
@@ -724,11 +791,16 @@ a[href="#top"]:hover {
     .parceiros p{
         margin-bottom: 2rem;
     }
-    .quemsomos {
+
+    .quemsomos-caixa {
         padding: 2rem;
     }
+    .quemsomos h3{
+        font-size: 2rem;
+    }
     .quemsomos p {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
     }
 
     .contato-wrapper {
