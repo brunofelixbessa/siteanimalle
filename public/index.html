@@ -10,22 +10,32 @@
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Servisos do firebase que vou usar -->
-    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script> -->
 
-    <!-- Add the slick-theme.css if you want default styling -->
+    <!-- Add the slick-theme.css para o carrossel de fotos -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
 
-    <!-- CSS custon  -->
+    <!-- CSS custon desse site -->
     <link rel="stylesheet" href="index.css">
 
-
+    <!-- serviço de envio de email por js -->
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WE8M8XWKH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5WE8M8XWKH');
+    </script>
 
 </head>
 
@@ -50,7 +60,8 @@
             </ul>
             <div class="social-media-sup">
                 <div style="width: 70%;">
-                    <a class="whatsapp-f-largo" target="_blank" href="https://api.whatsapp.com/send?phone=551122251917"><i
+                    <a class="whatsapp-f-largo" target="_blank"
+                        href="https://api.whatsapp.com/send?phone=551122251917"><i
                             class="fab fa-whatsapp"></i>Whatsapp</a>
                 </div>
             </div>
@@ -231,7 +242,7 @@
         </section>
 
         <section class="sessao-contato" id="contato">
-            
+
             <div class="contato-wrapper">
                 <div class="contato-e"></div>
                 <div class="contato-d">
@@ -255,13 +266,14 @@
                         </div>
                         <button class="btn" style="width: 100%;" type="submit">ENVIAR</button>
                         <br><br>
-                        <a class="whatsapp-f-largo" style="width: 100%;" target="_blank" href="https://api.whatsapp.com/send?phone=551122251917"><i
+                        <a class="whatsapp-f-largo" style="width: 100%;" target="_blank"
+                            href="https://api.whatsapp.com/send?phone=551122251917"><i
                                 class="fab fa-whatsapp"></i>Whatsapp</a>
                     </form>
                 </div>
             </div>
 
-           
+
 
         </section>
 
@@ -327,7 +339,7 @@
     </script>
 
     <!-- Para feed do instagram tem que ser sempre depois do index.js -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var userFeed = new Instafeed({
             get: 'user',
             target: "instafeed-container",
@@ -335,7 +347,7 @@
             accessToken: 'IGQVJWVDIzeFY3dGpkTE5fUGdtcHVHX3dSV3dfS1Nha3o0bmZAaR0tDb3N1UFpfdzRRX3JLSTZAveWJoY3dNdHU4S3dGdWEtYkhEZAmF0N0FudXdaLXF4SkJXY0NmT1h6NlRrRUhOSV9qdXBfd3BZAOFc0bQZDZD'
         });
         userFeed.run();
-    </script>
+    </script> -->
 
     <!-- Script para abrir pagina de laudos -->
     <script language="javascript">

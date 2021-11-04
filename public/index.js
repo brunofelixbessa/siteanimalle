@@ -1,21 +1,34 @@
+
+// import { initializeApp } from "firebase/app"
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+// import { getAnalytics } from 'firebase/analytics';
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyC1qSGpeYOMjLSMsfWp0Trh8ZWT7v6jXvk",
+//     authDomain: "animale-site.firebaseapp.com",
+//     databaseURL: "https://animale-site-default-rtdb.firebaseio.com",
+//     projectId: "animale-site",
+//     storageBucket: "animale-site.appspot.com",
+//     messagingSenderId: "705477879045",
+//     appId: "1:705477879045:web:bd382a7d3e29b0828f836c",
+//     measurementId: "G-5WE8M8XWKH"
+// };
+
 //############ Metodos Firebase #################
-//Pega metodos do Firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyC1qSGpeYOMjLSMsfWp0Trh8ZWT7v6jXvk",
-    authDomain: "animale-site.firebaseapp.com",
-    databaseURL: "https://animale-site-default-rtdb.firebaseio.com",
-    projectId: "animale-site",
-    storageBucket: "animale-site.appspot.com",
-    messagingSenderId: "705477879045",
-    appId: "1:705477879045:web:bd382a7d3e29b0828f836c",
-    measurementId: "G-5WE8M8XWKH"
-};
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+//const app = initializeApp(firebaseConfig);
+//const db = getFirestore(app);
 
-//Abre conexao com firebase Database
-var database = firebase.database();
+//Abre conexao com firebase Database e testa
+
+// Get a list of cities from your database
+// async function getCities(db) {
+//   const citiesCol = collection(db, 'EmailLeads');
+//   const citySnapshot = await getDocs(citiesCol);
+//   const cityList = citySnapshot.docs.map(doc => doc.data());
+//   return cityList;
+// }
 
 //Salva na coleção do Database
 function firebasePush(lead) {
