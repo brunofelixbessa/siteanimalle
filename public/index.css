@@ -178,6 +178,22 @@ input:-webkit-autofill:active {
     text-shadow: 1px 1px 3px #494949;
 }
 
+.whatsapp-f-largo{
+    color: #fff;
+    border: 3px solid #fff ;
+    border-radius: 25px;
+    background-color: #2CB241;
+    box-shadow: .1px .1px 3px #494949;
+    padding: 5px 10px;
+     font-size: 2rem;
+}
+
+.whatsapp-f-largo i {
+    font-size: 3rem;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
 .sidebar{
     width: 25rem;
     height: 100vh;
@@ -536,6 +552,7 @@ a[href="#top"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .sessao-contato h1{
     width: 100%;
